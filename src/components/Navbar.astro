@@ -4,20 +4,27 @@
 ---
 
 
-<ul role="list" class="link-card-grid">
-    <a href="/">
-		<h2>
-			Home
-		</h2>
-	</a>
+<nav role="list" class="navigation">
     <a href="/about">
-		<h2>
+		<h2 class="hover-text">
             About
 		</h2>
 	</a>
+    <!-- <a href="/about">
+		<h2 class="hover-text">
+            Date.me
+		</h2>
+	</a> -->
 </ul>
 
 <style>
+	.navigation {
+		display: flex;
+		justify-content: center;
+	}
+	ul {
+		display: flex;
+	}
 	a {
 		text-decoration: none;
 		line-height: 1.4;
@@ -36,4 +43,21 @@
 		margin-top: 0.5rem;
 		margin-bottom: 0;
 	}
+
+	.hover-text {
+        position: relative;
+        display: inline-block;
+    }
+
+    .hover-text::after {
+        content: "/";
+        position: absolute;
+        right: 100%;
+        margin-right: 0;
+        transition: margin-right 0.3s;
+    }
+
+    .hover-text:hover::after {
+        margin-right: 10px; /* Adjust the gap size as needed */
+    }
 </style>

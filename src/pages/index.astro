@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Content from '../layouts/Content.astro';
 import Panda from "../../public/panda.svg";
+import Navbar from '../components/Navbar.astro';
 
 ---
 
@@ -17,11 +19,11 @@ import Panda from "../../public/panda.svg";
 	</div>
 
 </Layout>
-<section class="newSection" id="content">
-  	<div>  
-	  <img src={Panda.src} width="250px">
-	</div>
-</section>
+<Content>
+		<div id="content">  
+			<img src={Panda.src} width="250px">
+		</div>
+</Content>
 
 
 <style>
@@ -126,20 +128,5 @@ import Panda from "../../public/panda.svg";
 		0% { opacity: 0; }
 		50% { opacity: 0.8; }
 		100% { opacity: 0; }
-	}
-
-	.newSection {
-		height: 100vh;
-		margin: auto;
-		width: auto;
-		padding: 1rem;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 	}
 </style>
