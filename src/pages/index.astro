@@ -13,13 +13,14 @@ import Panda from "../../public/panda.svg";
 		</div>
 		<a href="#content" class="scroll-down">
 			<span class="arrow-down"></span>
+			<span class="sr-only">Scroll down to content</span>
 		</a>
 	</div>
 
 </Layout>
 <section class="newSection" id="content">
   	<div>  
-	  <img src={Panda.src} width="250px">
+	  <img src={Panda.src} width="250px" alt="A panda waving towards you">
 	</div>
 </section>
 
@@ -141,5 +142,17 @@ import Panda from "../../public/panda.svg";
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
 	}
 </style>
